@@ -12,6 +12,16 @@ dist
 dist-ssr
 *.local
 
+#ignore public folder
+/public/
+
+#ignore specific files
+eslint.config.js
+
+#ingore json files
+package-lock.json
+package.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -155,5 +165,6 @@ dist
 !.yarn/versions
 
 # Vite logs files
+vite.config.js 
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
