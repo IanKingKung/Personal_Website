@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@theme {
+  /* Your shadcn variables go here */
+}
+
 @custom-variant dark (&:is(.dark *));
 #root {
   max-width: 1280px;

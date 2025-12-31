@@ -4,10 +4,10 @@ import { Meteors } from "@/components/ui/meteors";
 function About() {
     return (
         <>
-            <div className="relative h-[500px] w-full overflow-hidden">
-                <Meteors number={400}/>
+            <div>
+                <Meteors number={60} color="green"/>
             </div>
-            <text className="my-card">Ian Kung</text>
+            <text className="my-card" style={{color:"white"}}>Ian Kung</text>
         </>
     )
 }

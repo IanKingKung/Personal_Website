@@ -2,7 +2,7 @@
 
 /* You write this in a separate file */
 .my-card {
-  background-color: white;
+  background-color: grey;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
