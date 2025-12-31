@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils.ts"
 
 interface MeteorsProps {
   number?: number
@@ -16,9 +16,9 @@ export const Meteors = ({
   number = 20,
   minDelay = 0.2,
   maxDelay = 1.2,
-  minDuration = 2,
+  minDuration = 1,
   maxDuration = 10,
-  angle = 215,
+  angle = 220,
   className,
 }: MeteorsProps) => {
   const [meteorStyles, setMeteorStyles] = useState<Array<React.CSSProperties>>(
@@ -46,7 +46,7 @@ export const Meteors = ({
           key={idx}
           style={{ ...style }}
           className={cn(
-            "animate-meteor pointer-events-none absolute size-0.5 rotate-[var(--angle)] rounded-full bg-cyan-400 shadow-[0_0_0_1px_#ffffff10]",
+            "animate-meteor pointer-events-none absolute size-0.5 rotate-[var(--angle)] rounded-full bg-cyan-400 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]",
             className
           )}
         >
