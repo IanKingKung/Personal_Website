@@ -1,9 +1,14 @@
 import React from "react";
 import '../components_css/card.css'
-function Card() {
+
+type CardProps = {
+  className?: string;
+};
+
+function Card({ className }: CardProps) {
   return (
     <>
-        <div className="card">Ian Kung</div>
+        <div className={`card ${className}`}></div>
     </>
   );
 }
