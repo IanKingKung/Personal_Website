@@ -17,7 +17,7 @@ export const Meteors = ({
   minDelay = 0.2,
   maxDelay = 1.2,
   minDuration = 1,
-  maxDuration = 10,
+  maxDuration = 30,
   angle = 220,
   className,
 }: MeteorsProps) => {

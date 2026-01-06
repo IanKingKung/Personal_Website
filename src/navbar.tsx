@@ -6,10 +6,16 @@ function Navbar() {
 
     return (
         <>
-            <div className='navbar-container'>
-                <Link className= "nav-link" to="/about">About</Link>
-                <Link className= "nav-link" to="/projects">Projects</Link>
-                <Link className= "nav-link" to="/more">More</Link>
+            <div className="button-container">
+                <button className="button">
+                    <Link className= "nav-link" to="/about">About</Link>
+                </button>
+                <button className="button">
+                    <Link className= "nav-link" to="/projects">Projects</Link>
+                </button>
+                <button className="button">
+                    <Link className= "nav-link" to="/more">More</Link>
+                </button>
             </div>
         </>
     )
