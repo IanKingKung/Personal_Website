@@ -1,10 +1,12 @@
-import { Meteors } from "@/components/ui/meteors.tsx";
+import { WarpBackground } from "@/components/ui/warp-background.tsx"
 
 function Projects() {
     return (
         <>
-            <text>projects page</text>
-            <Meteors number={60}/>
+            <WarpBackground beamDuration={1}>
+            <div className="w-80" >
+            </div>
+            </WarpBackground>
         </>
     )
 }

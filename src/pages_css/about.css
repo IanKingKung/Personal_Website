@@ -1,47 +1,114 @@
 @import "tailwindcss";
 
-/* .card {
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  gap: 1rem;
+.bio-card {
+  position: fixed;
+  padding: 1rem;
+  padding-top: 2.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 150px; /* Half of profile width to offset to the right */
+  height: auto;
+  min-height: 450px;
+  max-height: 90vh;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 25px;
   backdrop-filter: blur(15px);
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192),
     inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164);
   transition: 0.5s;
-}    */
-
-/* You write this in a separate file */
-.bio-card {
-  position: absolute;
-  padding: 10px;
-  padding-top: 40px;
-  top: 20%;
-  left: 50%;
-  height: 500px;
-  width: 400px;
-  border-radius: 25px;
-  backdrop-filter: blur(15px);
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192),
-  inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164);
-  transition: 0.5s;
+  overflow-y: auto;
 }
 
+
 .profile-container {
-  border: 2px solid rgba(25, 48, 70, 0.508); /* color + thickness */
+  border: 2px solid rgba(25, 48, 70, 0.508);
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192),
-  inset 0 0 5px rgba(64, 178, 231, 0.274), 0 5px 5px rgba(33, 59, 112, 0.444);
+    inset 0 0 5px rgba(64, 178, 231, 0.274), 0 5px 5px rgba(33, 59, 112, 0.444);
   border-radius: 50%;
-  position: absolute;
-  top: 30%;
-  left: 30%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: -350px; /* Negative to offset to the left */
+  width: min(280px, 25vw);
+  height: min(280px, 25vw);
   object-fit: cover;
 }
 
 .profile {
-  height: 310px;
-  width: 320px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
+  object-fit: cover;
 }
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .bio-card {
+    margin-left: 0;
+    left: 50%;
+    top: 60%;
+    max-width: 90%;
+  }
+  
+  .profile-container {
+    margin-left: 0;
+    left: 50%;
+    top: 25%;
+    width: min(220px, 50vw);
+    height: min(220px, 50vw);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .bio-card {
+    padding: 0.75rem;
+    padding-top: 2rem;
+    min-height: 350px;
+  }
+  
+  .profile-container {
+    width: min(180px, 60vw);
+    height: min(180px, 60vw);
+  }
+}
+
+/* Contact Container */
+.contact-container {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;   
+  width: auto;           
+  min-width: 200px;      
+  transform: translateX(-50%);
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  
+  display: flex;         
+  flex-direction: row;   
+  justify-content: center; 
+  align-items: center;   
+  gap: 20px;         
+
+  backdrop-filter: blur(15px);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192),
+    inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164);
+}
+
+/* Logo Container (The Children) */
+.logo-container {
+  display: flex;
+  width: 24px;           /* Increased size slightly for visibility */
+  height: 24px;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.logo-container:hover {
+  transform: translateY(-3px); /* Optional: makes them bounce on hover */
+}
+
+

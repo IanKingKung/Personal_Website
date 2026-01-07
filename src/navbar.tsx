@@ -11,7 +11,7 @@ function Navbar() {
                     <Link className= "nav-link" to="/about">About</Link>
                 </button>
                 <button className="button">
-                    <Link className= "nav-link" to="/projects">Projects</Link>
+                    <Link className= "nav-link" to="/projects">Projects & Experience</Link>
                 </button>
                 <button className="button">
                     <Link className= "nav-link" to="/more">More</Link>
