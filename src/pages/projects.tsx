@@ -1,12 +1,14 @@
-import { WarpBackground } from "@/components/ui/warp-background.tsx"
+import { DotPattern } from "@/components/ui/dot-pattern.tsx"
+import { cn } from "@/lib/utils.ts"
+import '../pages_css/projects.css'
 
 function Projects() {
     return (
         <>
-            <WarpBackground beamDuration={1}>
-            <div className="w-80" >
+            <DotPattern glow={true} width={22} height={22} />
+            <div className="project-card">
+                Hi
             </div>
-            </WarpBackground>
         </>
     )
 }
