@@ -1,6 +1,7 @@
 import '../pages_css/about.css'
 import { Meteors } from "@/components/ui/meteors.tsx";
 import profile from './profile.png'
+import mogging from './svg/mogging.png'
 import githublogo from './svg/github.svg'
 import linkedinlogo from './svg/linkedin.svg'
 import youtubelogo from './svg/youtube.svg'
@@ -37,7 +38,7 @@ function About() {
                     </div>
                 </div>
                 <div className="profile-container">
-                    <img src={profile} className="profile" alt="Profile" />
+                    <img src={mogging} className="profile" alt="Profile" />
                 </div>
             </div>
         </>
