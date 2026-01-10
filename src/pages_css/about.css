@@ -5,7 +5,7 @@
   padding: 1rem;
   padding-top: 2.5rem;
   top: 50%;
-  left: 50%;
+  left: 53%;
   transform: translate(-50%, -50%);
   margin-left: 150px; /* Half of profile width to offset to the right */
   height: auto;
@@ -29,7 +29,7 @@
   border-radius: 50%;
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 57%;
   transform: translate(-50%, -50%);
   margin-left: -350px; /* Negative to offset to the left */
   width: min(280px, 25vw);
@@ -55,7 +55,7 @@
   
   .profile-container {
     margin-left: 0;
-    left: 50%;
+    left: 55%;
     top: 25%;
     width: min(220px, 50vw);
     height: min(220px, 50vw);
@@ -98,17 +98,17 @@
     inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164);
 }
 
-/* Logo Container (The Children) */
+
 .logo-container {
   display: flex;
-  width: 24px;           /* Increased size slightly for visibility */
-  height: 24px;
+  width: 28px;           
+  height: 28px;
   color: white;
   transition: transform 0.2s;
 }
 
 .logo-container:hover {
-  transform: translateY(-3px); /* Optional: makes them bounce on hover */
+  transform: translateY(-3px); 
 }
 
 

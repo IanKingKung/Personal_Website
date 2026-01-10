@@ -4,6 +4,7 @@ import profile from './profile.png'
 import githublogo from './svg/github.svg'
 import linkedinlogo from './svg/linkedin.svg'
 import youtubelogo from './svg/youtube.svg'
+import itchlogo from './svg/itch.svg'
 
 function About() {
     return (
@@ -29,6 +30,9 @@ function About() {
                         </a>
                         <a href="https://www.youtube.com/channel/UCo-58-MsM9AokDZim_jZIyQ">
                             <img src={youtubelogo} alt="Youtube" className="logo-container"/>
+                        </a>
+                        <a href="https://ianfarmsmelons.itch.io/">
+                            <img src={itchlogo} alt="Itch.io" className="logo-container"/>
                         </a>
                     </div>
                 </div>

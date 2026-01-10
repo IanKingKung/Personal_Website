@@ -28,7 +28,7 @@ export const Meteors = ({
   useEffect(() => {
     const styles = [...new Array(number)].map(() => ({
       "--angle": -angle + "deg",
-      top: "-5%",
+      top: "-10%",
       left: `calc(0% + ${Math.floor(Math.random() * window.innerWidth)}px)`,
       animationDelay: Math.random() * (maxDelay - minDelay) + minDelay + "s",
       animationDuration:
@@ -38,6 +38,10 @@ export const Meteors = ({
     setMeteorStyles(styles)
   }, [number, minDelay, maxDelay, minDuration, maxDuration, angle])
 
+  const explodeMeteors = () => {
+    //TODO: implement meteor explosion effect
+  }
+
   return (
     <>
       {[...meteorStyles].map((style, idx) => (
@@ -46,12 +50,12 @@ export const Meteors = ({
           key={idx}
           style={{ ...style }}
           className={cn(
-            "animate-meteor pointer-events-none absolute size-0.5 rotate-[var(--angle)] rounded-full bg-cyan-400 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]",
+            "animate-meteor pointer-events-none absolute size-1 rotate-[var(--angle)] rounded-full bg-cyan-300 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]",
             className
           )}
         >
           {/* Meteor Tail */}
-          <div className="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-cyan-400 to-transparent" />
+          <div className="pointer-events-none absolute top-1/2 -z-10 h-[3px] w-[100px] -translate-y-1/2 bg-gradient-to-r from-cyan-300 to-transparent" />
         </span>
       ))}
     </>
