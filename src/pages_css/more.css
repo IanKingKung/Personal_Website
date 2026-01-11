@@ -27,7 +27,7 @@
 .more-card {
     position: absolute;
     top: 5vh;
-    left: 25vw;
+    left: 22vw;
     margin: 15px;
     display: flex;
     flex-direction: column;
@@ -46,7 +46,7 @@
 .quote-card {
     position: absolute;
     top: 63vh;
-    left: 28.5vw;
+    left: 25.9vw;
     display: flex;
     margin-top: 30px;
     flex-direction: column;

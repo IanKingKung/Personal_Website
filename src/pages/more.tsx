@@ -23,7 +23,7 @@ function More() {
 			</div>
 
 			<div className="quote-card">
-				<text style={{fontWeight: "bold", fontSize: "20px"}}>Easy isn't always simple.</text>
+				<text style={{fontWeight: "bold", fontSize: "20px", color: 'yellow'}}>Easy isn't always simple.</text>
 				<p style={{fontSize: "14px", color: "grey"}}>-Star Wars the Clone Wars 2.11</p>
 			</div>
 
