@@ -23,16 +23,16 @@ function About() {
                         and embedded systems programming. Read more about my hobbies in the More page and check out my websites! 
                     </p>
                     <div className="contact-container">
-                        <a href="https://github.com/IanKingKung">
+                        <a href="https://github.com/IanKingKung" target="_blank">
                             <img src={githublogo} alt="GitHub" className="logo-container"/>
                         </a>
-                        <a href="https://www.linkedin.com/in/ian-kung-741a3a33a/">
+                        <a href="https://www.linkedin.com/in/ian-kung-741a3a33a/" target="_blank">
                             <img src={linkedinlogo} alt="LinkedIn" className="logo-container"/>
                         </a>
-                        <a href="https://www.youtube.com/channel/UCo-58-MsM9AokDZim_jZIyQ">
+                        <a href="https://www.youtube.com/channel/UCo-58-MsM9AokDZim_jZIyQ" target="_blank">
                             <img src={youtubelogo} alt="Youtube" className="logo-container"/>
                         </a>
-                        <a href="https://ianfarmsmelons.itch.io/">
+                        <a href="https://ianfarmsmelons.itch.io/" target="_blank">
                             <img src={itchlogo} alt="Itch.io" className="logo-container"/>
                         </a>
                     </div>
