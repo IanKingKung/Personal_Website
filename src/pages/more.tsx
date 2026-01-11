@@ -1,25 +1,35 @@
 import '../pages_css/more.css'
+import { DotPattern } from "@/components/ui/dot-pattern.tsx"
 
 function More() {
     return (
-<div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
-	<div className="wheel"></div>
-	<div className="hamster">
-		<div className="hamster__body">
-			<div className="hamster__head">
-				<div className="hamster__ear"></div>
-				<div className="hamster__eye"></div>
-				<div className="hamster__nose"></div>
+		<>
+			<div className="background-container">
+                    <DotPattern glow={true} width={22} height={22} cr={1.5} />
+            </div>
+
+			<div className="marquee">
+				<div className="marquee_header">Infinite Marquee</div>
+				<div className="marquee__inner">
+					<div className="marquee__group">
+					<span>🔥 Item 1</span>
+					<span>✨ Item 2</span>
+					<span>🚀 Item 3</span>
+					<span>🌟 Item 4</span>
+					<span>🎉 Item 5</span>
+					</div>
+
+					<div className="marquee__group">
+					<span>🔥 Item 1</span>
+					<span>✨ Item 2</span>
+					<span>🚀 Item 3</span>
+					<span>🌟 Item 4</span>
+					<span>🎉 Item 5</span>
+					</div>
+				</div>
 			</div>
-			<div className="hamster__limb hamster__limb--fr"></div>
-			<div className="hamster__limb hamster__limb--fl"></div>
-			<div className="hamster__limb hamster__limb--br"></div>
-			<div className="hamster__limb hamster__limb--bl"></div>
-			<div className="hamster__tail"></div>
-		</div>
-	</div>
-	<div className="spoke"></div>
-</div>
+
+		</>
     )
 }
 
