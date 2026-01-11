@@ -1,4 +1,5 @@
 import '../pages_css/more.css'
+import { Marquee } from "@/components/ui/marquee.tsx"
 import { DotPattern } from "@/components/ui/dot-pattern.tsx"
 
 function More() {
@@ -8,26 +9,31 @@ function More() {
                     <DotPattern glow={true} width={22} height={22} cr={1.5} />
             </div>
 
-			<div className="marquee">
-				<div className="marquee_header">Infinite Marquee</div>
-				<div className="marquee__inner">
-					<div className="marquee__group">
-					<span>🔥 Item 1</span>
-					<span>✨ Item 2</span>
-					<span>🚀 Item 3</span>
-					<span>🌟 Item 4</span>
-					<span>🎉 Item 5</span>
-					</div>
-
-					<div className="marquee__group">
-					<span>🔥 Item 1</span>
-					<span>✨ Item 2</span>
-					<span>🚀 Item 3</span>
-					<span>🌟 Item 4</span>
-					<span>🎉 Item 5</span>
-					</div>
-				</div>
+			<div className="more-card">
+				<text style={{fontWeight: "bold", fontSize: "24px"}}>More About Me</text>
+				<p>
+					Aside from coding and engineering, I have a ton of hobbies and activities that keep my 
+					life balanced. I enjoy drawing, specifically ink and pen, ranging from architecture to 
+					creative designs. I also love playing video games and Star Wars, hence my experience in game development and
+					storytelling. Yet most importantly, I value exercise and fitness. I'm a swimmer and a weightlifer, prioritizing physical health along with mental health. I believe in exercise everyday despite a busy 
+					schedule to keep my entire body and mind in shape. If you have any inquiries about me
+					or even art	commisions feel free to reach out through my social media links in the About page!
+				</p>
 			</div>
+
+			<div className="quote-card">
+				<text style={{fontWeight: "bold", fontSize: "20px"}}>Easy isn't always simple.</text>
+				<p style={{fontSize: "14px", color: "grey"}}>-Star Wars the Clone Wars 2.11</p>
+			</div>
+
+
+
+			<Marquee pauseOnHover={true} vertical={true} reverse={true} className="marquee-container">
+				<span>Next.js</span>
+				<span>React</span>
+				<span>TypeScript</span>
+				<span>Tailwind CSS</span>
+			</Marquee>
 
 		</>
     )
