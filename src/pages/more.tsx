@@ -1,6 +1,7 @@
 import '../pages_css/more.css'
 import { Marquee } from "@/components/ui/marquee.tsx"
 import { DotPattern } from "@/components/ui/dot-pattern.tsx"
+import mogging from './svg/mogging.png'
 
 function More() {
     return (
@@ -29,7 +30,7 @@ function More() {
 
 
 			<Marquee pauseOnHover={true} vertical={true} reverse={true} className="marquee-container">
-				<span>Next.js</span>
+				<span className="marquee-card-container"><img src={mogging} className="marquee-cards"/></span>
 				<span>React</span>
 				<span>TypeScript</span>
 				<span>Tailwind CSS</span>
