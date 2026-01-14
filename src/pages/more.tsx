@@ -14,6 +14,8 @@ function More() {
 	async function getFunFact() {
 		const response = await fetch(FunFactsTxt);
 		const text = await response.text();
+
+		//split create an array called facts separated by new lines
 		const facts = text.split("\n");
 		const randomIndex = Math.floor(Math.random() * facts.length);
 
