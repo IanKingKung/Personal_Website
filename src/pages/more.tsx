@@ -1,9 +1,35 @@
 import '../pages_css/more.css'
+import { useState, useEffect } from "react";
+import FunFactsTxt from "./quotes.txt"
 import { Marquee } from "@/components/ui/marquee.tsx"
 import { DotPattern } from "@/components/ui/dot-pattern.tsx"
 import mogging from './svg/mogging.png'
 
 function More() {
+
+	//make code for quote button
+	const [funFact, setFunFact] = useState("");
+	const [author, setAuthor] = useState("");
+
+	async function getFunFact() {
+		const response = await fetch(FunFactsTxt);
+		const text = await response.text();
+		const facts = text.split("\n");
+		const randomIndex = Math.floor(Math.random() * facts.length);
+
+		const selectedLine = facts[randomIndex];
+
+		if (!selectedLine) return;
+		const [quote, author] = selectedLine.split("-");
+		setFunFact(quote || "Easy Isn't Always Simple.");
+		setAuthor(author || "Star Wars the Clone Wars");
+	}
+
+	function handleClick() {
+		getFunFact();
+	}
+
+
     return (
 		<>
 			<div className="background-container">
@@ -22,15 +48,18 @@ function More() {
 				</p>
 			</div>
 
-			<div className="quote-card">
-				<text style={{fontWeight: "bold", fontSize: "20px", color: 'yellow'}}>Easy isn't always simple.</text>
-				<p style={{fontSize: "14px", color: "grey"}}>-Star Wars the Clone Wars 2.11</p>
+			<div className="quote-card" onClick={handleClick}>
+				<text style={{fontWeight: "bold", fontSize: "20px", color: 'yellow'}}>{funFact}</text>
+				<p style={{fontSize: "14px", color: "grey"}}>-{author}</p>
+
+				{/* <text style={{fontWeight: "bold", fontSize: "20px", color: 'yellow'}}>Easy isn't always simple.</text>
+				<p style={{fontSize: "14px", color: "grey"}}>-Star Wars the Clone Wars 2.11</p> */}
 			</div>
 
 
 
 			<Marquee pauseOnHover={true} vertical={true} reverse={true} className="marquee-container">
-				<span className="marquee-card-container"><img src={mogging} className="marquee-cards"/></span>
+				{/* <span className="marquee-card-container"><img src={mogging} className="marquee-cards"/></span> */}
 				<span>React</span>
 				<span>TypeScript</span>
 				<span>Tailwind CSS</span>
