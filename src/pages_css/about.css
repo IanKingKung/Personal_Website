@@ -7,7 +7,7 @@
   top: 50%;
   left: 53%;
   transform: translate(-50%, -50%);
-  margin-left: 150px; /* Half of profile width to offset to the right */
+  margin-left: 150px; 
   height: auto;
   min-height: 450px;
   max-height: 90vh;

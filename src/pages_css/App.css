@@ -1,9 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@theme {
-  /* Your shadcn variables go here */
-}
+
 
 @custom-variant dark (&:is(.dark *));
 #root {

@@ -72,7 +72,6 @@
 
 @media (max-width: 1100px) {
     .marquee-container {
-        /* Option A: Move it higher/lower to clear the cards */
         top: 85vh; 
         width: 10%;
         left: 0;
