@@ -13,6 +13,7 @@ import pic7 from './marquee-cards/pic7.png'
 import pic8 from './marquee-cards/pic8.png'
 import pic9 from './marquee-cards/pic9.png'
 
+//test commit
 function More() {
 
 	//make code for quote button
