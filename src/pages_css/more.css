@@ -85,3 +85,11 @@
         left: 5vw;
     }
 }
+
+.quote-button {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 250;
+    color: lightgrey;
+}

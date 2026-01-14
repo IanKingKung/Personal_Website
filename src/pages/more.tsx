@@ -50,9 +50,12 @@ function More() {
 				</p>
 			</div>
 
-			<div className="quote-card" onClick={handleClick}>
+			<div onClick={handleClick} className="quote-card">
 				<text style={{fontWeight: "bold", fontSize: "20px", color: 'yellow'}}>{funFact}</text>
 				<p style={{fontSize: "14px", color: "grey"}}>-{author}</p>
+				<div className="quote-button">
+					<text onClick={handleClick}>New Quote</text>
+				</div>
 
 				{/* <text style={{fontWeight: "bold", fontSize: "20px", color: 'yellow'}}>Easy isn't always simple.</text>
 				<p style={{fontSize: "14px", color: "grey"}}>-Star Wars the Clone Wars 2.11</p> */}
