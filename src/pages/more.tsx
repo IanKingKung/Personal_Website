@@ -13,7 +13,6 @@ import pic7 from './marquee-cards/pic7.png'
 import pic8 from './marquee-cards/pic8.png'
 import pic9 from './marquee-cards/pic9.png'
 
-//test commit
 function More() {
 
 	//make code for quote button
@@ -59,6 +58,7 @@ function More() {
                     <DotPattern glow={true} width={22} height={22} cr={1.5} />
             </div>
 
+			<div className="cards-wrapper">
 			<div className="more-card">
 				<text style={{fontWeight: "bold", fontSize: "28px", color: "Yellow"}}>More About Me</text>
 				<p>
@@ -81,10 +81,11 @@ function More() {
 				{/* <text style={{fontWeight: "bold", fontSize: "20px", color: 'yellow'}}>Easy isn't always simple.</text>
 				<p style={{fontSize: "14px", color: "grey"}}>-Star Wars the Clone Wars 2.11</p> */}
 			</div>
+			</div>
 
 
 
-			<Marquee pauseOnHover={true} vertical={true} reverse={true} className="marquee-container">
+			<Marquee pauseOnHover={false} vertical={true} reverse={true} className="marquee-container">
 				<span className="marquee-card-container"><img src={pic1} className="marquee-cards"/></span>
 				<span className="marquee-card-container"><img src={pic2} className="marquee-cards"/></span>
 				<span className="marquee-card-container"><img src={pic3} className="marquee-cards"/></span>
