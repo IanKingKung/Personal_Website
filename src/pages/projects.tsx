@@ -1,6 +1,7 @@
 import { DotPattern } from "@/components/ui/dot-pattern.tsx"
 import { cn } from "@/lib/utils.ts"
 import '../pages_css/projects.css'
+import { WarpBackground } from "@/components/ui/warp-background.tsx";
 
 function Projects() {
     return (
