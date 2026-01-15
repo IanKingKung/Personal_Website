@@ -1,8 +1,10 @@
 import '../pages_css/more.css'
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import FunFactsTxt from "./quotes.txt"
 import { Marquee } from "@/components/ui/marquee.tsx"
 import { DotPattern } from "@/components/ui/dot-pattern.tsx"
+import { Meteors } from "@/components/ui/meteors.tsx";
+
 import pic1 from './marquee-cards/pic1.png'
 import pic2 from './marquee-cards/pic2.png'
 import pic3 from './marquee-cards/pic3.png'
@@ -45,6 +47,7 @@ function More() {
 			<div className="page-view-lock">
 				<div className="background-container">
 						<DotPattern glow={true} width={22} height={22} cr={1.5} />
+						{/* <Meteors number={5} minDuration={1} maxDuration={2}/> */}
 				</div>
 
 				<div className="cards-wrapper" key="more-page-content">
