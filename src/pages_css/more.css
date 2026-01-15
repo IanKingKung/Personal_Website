@@ -3,9 +3,17 @@
   inset: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
   overflow: hidden;
+}
+
+.page-view-lock{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* This locks scrolling just for this view */
+    position: relative;
+
 }
 
 .marquee-cards {
@@ -13,7 +21,7 @@
     border-radius: 25px;
     min-width: 15vw;
     max-width: 20vw;
-    height: auto;
+    height: 400px;
     border: 10px solid white; 
     object-fit: cover; 
 }
@@ -67,7 +75,8 @@
   position: absolute;
   margin-left: auto; 
   top: 0%;
-  width: 30%;        
+  width: 30%;      
+  z-index: 1;  
 }
 
 
