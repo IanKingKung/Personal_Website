@@ -1,14 +1,16 @@
 import { DotPattern } from "@/components/ui/dot-pattern.tsx"
 import { cn } from "@/lib/utils.ts"
 import '../pages_css/projects.css'
-import { WarpBackground } from "@/components/ui/warp-background.tsx";
+// import { WarpBackground } from "@/components/ui/warp-background.tsx";
+import { Meteors } from "@/components/ui/meteors.tsx";
 
 function Projects() {
     return (
         <>
             <div className={cn("main-content-wrapper")}>
                 <div className="background-container">
-                    <DotPattern glow={true} width={22} height={22} cr={1.5} />
+                    {/* <DotPattern glow={true} width={22} height={22} cr={1.5} /> */}
+                    <Meteors number={8} minDuration={2} maxDuration={6}/>
                 </div>
 
                 {/* MicroMouse */}

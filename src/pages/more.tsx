@@ -1,8 +1,8 @@
 import '../pages_css/more.css'
 import { useState } from "react";
 import FunFactsTxt from "./quotes.txt"
-import { Marquee } from "@/components/ui/marquee.tsx"
-import { DotPattern } from "@/components/ui/dot-pattern.tsx"
+// import { Marquee } from "@/components/ui/marquee.tsx"
+// import { DotPattern } from "@/components/ui/dot-pattern.tsx"
 import { Meteors } from "@/components/ui/meteors.tsx";
 
 import pic1 from './marquee-cards/pic1.png'
@@ -17,9 +17,11 @@ import pic9 from './marquee-cards/pic9.png'
 
 function More() {
 
-	//make code for quote button
+	//make code for quote button and picture card
 	const [funFact, setFunFact] = useState("");
 	const [author, setAuthor] = useState("");
+	const [currentIndex, setCurrentIndex] = useState(0);
+	const images = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9];
 
 	async function getFunFact() {
 		const response = await fetch(FunFactsTxt);
@@ -41,13 +43,19 @@ function More() {
 		getFunFact();
 	}
 
+	function newPictureCard() {
+		let index = currentIndex;
+		index = (currentIndex + 1) % images.length;
+		setCurrentIndex(index);
+	}
+
 
     return (
 		<>
 			<div className="page-view-lock">
 				<div className="background-container">
-						<DotPattern glow={true} width={22} height={22} cr={1.5} />
-						{/* <Meteors number={5} minDuration={1} maxDuration={2}/> */}
+						{/* <DotPattern glow={true} width={22} height={22} cr={1.5} /> */}
+						<Meteors number={8} minDuration={2} maxDuration={6}/>
 				</div>
 
 				<div className="cards-wrapper" key="more-page-content">
@@ -72,9 +80,15 @@ function More() {
 					</div>
 				</div>
 
+				<div onClick={newPictureCard} className="picture-card">
+					<img src={images[currentIndex]}/>
+					<button className="next-button" onClick={newPictureCard}>
+  						<span> &gt; </span>
+					</button>
 
+				</div>
 
-				<Marquee pauseOnHover={false} vertical={true} reverse={true} className="marquee-container">
+				{/* <Marquee pauseOnHover={false} vertical={true} reverse={true} className="marquee-container">
 					<span className="marquee-card-container"><img src={pic1} className="marquee-cards"/></span>
 					<span className="marquee-card-container"><img src={pic2} className="marquee-cards"/></span>
 					<span className="marquee-card-container"><img src={pic3} className="marquee-cards"/></span>
@@ -84,7 +98,7 @@ function More() {
 					<span className="marquee-card-container"><img src={pic7} className="marquee-cards"/></span>
 					<span className="marquee-card-container"><img src={pic8} className="marquee-cards"/></span>
 					<span className="marquee-card-container"><img src={pic9} className="marquee-cards"/></span>
-				</Marquee>
+				</Marquee> */}
 			</div>
 		</>
     )
