@@ -13,19 +13,41 @@ function Projects() {
                     <Meteors number={8} minDuration={2} maxDuration={6}/>
                 </div>
 
-                {/* MicroMouse */}
+                {/* O.A.T - Obstacle Avoiding */}
                 <div className="project-card">
-                    <div className="title-container">MicroMouse <em style={{color: "#18a597ff"}}>(In Progress)</em></div>
+                    <div className="title-container">O.A.T - Obstacle Avoiding Traveler</div>
                     <div className="description-container">
-                        <p> PCB design and embedded systems coding of a micro mouse that can navigate 
-                            through a maze. Reliant on encoders, sensors and a maze-solving algorithm 
-                            to build a robot that can successfully withstand outside competition.</p>
+                        <p> Hardware design and embedded systems coding of a self-navigating car that can evade obstacles.
+                            Based on the Arduino Elegoo Uno R3, this car consists of an L293d motor driver, cardboard, and an ultrasonic sensor.
+                            The car's code can be found on my GitHub and the various versions of the project can be found 
+                            <a href="https://www.youtube.com/watch?v=oxoyjz0Qk2U&list=PL-xVBaW5fhM9Xo81V2jfsH6ZnOhlxh0pz" target="_blank"> here.</a>
+                        </p>
                     </div>
                     <div className="skills-container">
-                        <div className="individual-skill">PCB</div>
+                        <div className="individual-skill">Arduino</div>
                         <div className="individual-skill">Embedded Systems</div>
+                        <div className="individual-skill">Robotics</div>
                         <div className="individual-skill">C++</div>
-                        <div className="individual-skill">KiCad</div>
+                    </div>
+                </div>
+
+                {/* TraceBack */}
+                <div className="project-card">
+                    <div className="title-container">TraceBack: An Agentic Error-Tracing & Auto-Fixing VSCode Extension </div>
+                    <div className="description-container">
+                        <p> TraceBack is a VSCode extension that provides agentic error-tracing and auto-fixing capabilities, lowering the usage of 
+                            tokens and increasing the efficiency of resolving common coding errors. Traceback leverages the Fetch.ai API to analyze 
+                            code, store it into a SupaBase database, and uses a cosine similarity algorithm to locate the most relevant 
+                            error-fixing code snippets. Learn more <a href="https://devpost.com/software/traceback-xa7ybd" target="_blank">here </a> 
+                            or check out the GitHub repo <a href="https://github.com/ishaan123456789o/LA-Hacks-2026" target="_blank">here</a>!
+                        </p>
+                    </div>
+                    <div className="skills-container">
+                        <div className="individual-skill">Fetch.ai</div>
+                        <div className="individual-skill">SupaBase</div>
+                        <div className="individual-skill">FigmaMake</div>
+                        <div className="individual-skill">Python</div>
+                        <div className="individual-skill">TypeScript</div>
                     </div>
                 </div>
 
@@ -122,22 +144,6 @@ function Projects() {
                         <div className="individual-skill">C++</div>
                         <div className="individual-skill">Embedded Systems</div>
                         <div className="individual-skill">Arduino</div>
-                    </div>
-                </div>
-
-                {/* New Rogue-Like Game (In progress) */}
-                <div className="project-card">
-                    <div className="title-container">New Rogue-Like Game <em style={{color: "#18a597ff"}}>(In progress)</em></div>
-                    <div className="description-container">
-                        <p>
-                            A new rogue-like game currently in development highlighting an adventurous 
-                            and dreamlike tale combining fantasy and sci-fi… 
-                        </p>
-                    </div>
-                    <div className="skills-container">
-                        <div className="individual-skill">FUN!</div>
-                        <div className="individual-skill">Creative</div>
-                        <div className="individual-skill">Breathtaking</div>
                     </div>
                 </div>
 
